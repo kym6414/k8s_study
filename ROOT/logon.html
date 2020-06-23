@@ -1,0 +1,299 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Mirrored from logon.skbroadband.com:7443/3rd/signup.jsp?NONCE=mb44dkHcFTtjuXoQAOnAdFuRqx5Tf2CkO27OcxpeesaiWrZ91jqgf1TFdN58wH1EeEm1zuFI1qCm+ZA8lUIA6w%3D%3D&UURL=https%3A%2F%2Flogon.skbroadband.com%3A7443%2Fnls%2Ffcs by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jun 2020 10:05:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=EUC-KR" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="EUC-KR">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>로그인 | 개인 | SK브로드밴드</title>
+    <link rel="stylesheet" href="https://logon.skbroadband.com:7443/3rd/common/20180410/base.css" type="text/css">
+    <link rel="stylesheet" href="https://logon.skbroadband.com:7443/3rd/common/20180410/common.css" type="text/css">
+
+<style type="text/css">
+.ime_en {-webkit-ime-mode:inactive; -moz-ime-mode:inactive; -ms-ime-mode:inactive; ime-mode:inactive;}
+</style>
+
+<script type="text/javascript" src="https://logon.skbroadband.com:7443/3rd/login.js"></script>
+<script type="text/javascript" src="https://logon.skbroadband.com:7443/3rd/common/popup.js"></script>
+
+<script language="javascript">
+//
+// captcha 측 스크립트 함수 모음
+//
+document.domain = 'skbroadband.com';
+
+function pwReset() {
+    document.getElementById('captcha').contentWindow.location.reload();
+}
+
+function chkMainValue() {
+    if (document.submitform1.userid.value == "") {
+        alert("아이디를 입력하세요");
+        document.submitform1.userid.select();
+        return false;
+    }
+    else if (document.submitform1.password.value == "") {
+        alert("비밀번호를 입력하세요");
+        document.submitform1.password.select();
+        return false;
+    }
+    else if (checkID(document.submitform1.userid.value) == false) {
+        alert('아이디는 특수문자를 사용하실 수 없습니다.');
+        document.submitform1.userid.select();
+        return false;
+    }
+    else {
+        saveidCookie();
+    }
+
+    return true;
+}
+
+function tmpSubmit() {
+    captcha.check('LOGON');
+}
+
+function loginSubmit() {
+    document.submitform1.submit();
+}
+
+function chkKey() {
+    if (event.keyCode == 13) {
+        if (document.submitform1.userid.value.length < 1) {
+            document.submitform1.userid.select();
+            return false;
+        }
+        else if (document.submitform1.password.value.length < 1) {
+            document.submitform1.password.select();
+            return false;
+        }
+        else {
+            if (chkMainValue()) {
+                captcha.check('LOGON');
+            }
+        }
+    }
+    else
+        return false;
+}
+
+function useridKeyup(fm) {
+    var pattern = /[^(a-zA-Z0-9)]/;
+    if (pattern.test(fm.userid.value)) {
+        alert("아이디는 영문,숫자만 허용합니다.");
+        fm.userid.value = "";
+        fm.userid.focus();
+        return false;
+    }
+
+    fm.userid.value = fm.userid.value.toLowerCase();
+}
+
+function MemberSubFormCheck() {
+    if (document.submitform1.userid.value == "") {
+        alert("아이디를 입력하세요");
+        document.submitform1.userid.select();
+        return false;
+    }
+    else if (document.submitform1.password.value == "") {
+        alert("비밀번호를 입력하세요");
+        document.submitform1.password.select();
+        return false;
+    }
+    else if (checkID(document.submitform1.userid.value) == false) {
+        alert('아이디는 특수문자를 사용하실 수 없습니다.');
+        document.submitform1.userid.select();
+        return false;
+    }
+    else {
+        saveidCookie();
+    }
+
+    document.submitform1.submit();
+}
+
+function checkkey() {
+    if (event.keyCode == 13) {
+        if (document.submitform1.userid.value.length < 1) {
+            document.submitform1.userid.select();
+            return false;
+        }
+        else if (document.submitform1.password.value.length < 1) {
+            document.submitform1.password.select();
+            return false;
+        }
+        else {
+            MemberSubFormCheck();
+        }
+    }
+    else
+        return false;
+}
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+//CD6 로그인 여부 Y / N
+//CD7 언어코드
+dataLayer = [{
+                    'CD6' : 'N'
+                   ,'CD7' : 'kr'
+              }];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKC9GWK');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body onLoad="getssoid();">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKC9GWK"
+height="0" width="0" style="display:none;visibility:hidden" title="빈프레임"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="wrap" class="type_wrap02">
+    <!-- header -->
+    <header class="header">
+        <h1 class="logo"><a href="http://www.skbroadband.com/"><img src="https://logon.skbroadband.com:7443/3rd/img/20180410/logo_error.png" alt="sk broadband"></a></h1>
+    </header>
+    <!--// header -->
+    <!-- containers -->
+    <div id="containers">
+        <div id="contents" class="login">
+            <div class="conts_box">
+                <h2 class="hide">로그인</h2>
+                <div class="login_box">
+                    <div class="login_txt">
+                        <p class="tit01">SK브로드밴드에<br>오신 것을 환영합니다.</p>
+                        <p class="s_txt">서비스를 이용하시려면 로그인 해주세요.</p>
+                    </div>
+                    <div class="login_form">
+                    <form onsubmit="return false;" name="submitform1" autocomplete="off" method="post" action="https://logon.skbroadband.com:7443/3rd/idPasswordLogin.jsp?UURL=https%3A%2F%2Flogon.skbroadband.com%3A7443%2Fnls%2Ffcs&amp;NONCE=mb44dkHcFTtjuXoQAOnAdFuRqx5Tf2CkO27OcxpeesaiWrZ91jqgf1TFdN58wH1EeEm1zuFI1qCm+ZA8lUIA6w%3D%3D&amp;InitechEamNoCacheNonce=NOKzF7bQwAAYKZwwHK8Miw%3D%3D&amp;lptype=ID01">
+                        <input type="hidden" name="fromUrl" value="www.skbroadband.com" />
+                        <input type="hidden" name="fromFullUrl" value="http://www.skbroadband.com/LoginProc.do?retUrl=/Main.do" />
+
+                        <fieldset>
+                            <legend>로그인</legend>
+                            <div class="login_inp id">
+                                <label for="inp_id">아이디</label>
+                                <span class="input_txt">
+                                    <input type="email" id="inp_id" placeholder="아이디를 입력하세요." name="userid" maxlength="20" onKeyUp="checkkey();useridKeyup(submitform1);" class="ime_en">
+                                </span>
+                            </div>
+                            <div class="login_inp">
+                                <label for="inp_pw">비밀번호</label>
+                                <span class="input_txt">
+                                    <input type="password" id="inp_pw" placeholder="비밀번호를 입력하세요." name="password" maxlength="20" onKeyUp="checkkey();">
+                                </span>
+                            </div>
+                            <div class="btm_cont">
+                                <span class="chk_wrap">
+                                    <input type="checkbox" name="idcheck" id="id_store"><label for="id_store">아이디 저장</label>
+                                </span>
+                                <button type="button" class="btn login" onClick="location.href='Main.html'">로그인</button><!-- 웹접근성수정_2차 [버튼 위치 변경] -->
+                                <div class="link_area">
+                                    <a href="https://www.skbroadband.com/common/Iframe_View.do?retUrl=https%3A//ucyber.skbroadband.com:8443/normal.do%3FserviceId%3DS_DUMY0001%26viewId%3DV_PERS0009" class="list_link">회원가입</a>
+                                    <a href="https://www.skbroadband.com/common/Iframe_View.do?retUrl=https%3A//ucyber.skbroadband.com:8443/normal.do%3FserviceId%3DS_DUMY0001%26viewId%3DV_PERS0000" class="list_link">아이디/비밀번호 찾기</a>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="conts_box last">
+                <div class="login_info_box">
+                    <div class="tit_wrap">
+                        <h3 class="tit01">로그인 안내</h3>
+                        <div class="ui_tab tit_info_tab">
+                            <ul>
+                                <li class="ui_tab_nav tab on"><a href="#tab01" class="tab_link"><span class="hide">선택됨</span>보안문자</a></li>
+                                <li class="ui_tab_nav tab"><a href="#tab02" class="tab_link"><span class="hide"></span>회원가입</a></li>
+                                <li class="ui_tab_nav tab"><a href="#tab03" class="tab_link"><span class="hide"></span>아이디/비밀번호 찾기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab_contents">
+                        <div id="tab01">
+                            <div class="gray_line_box">
+                                <ul class="bull_list min">
+                                    <!-- 180424_수정 [카피] -->
+                                    <li class="square">고객님의 소중한 정보 보호를 위해 로그인시 보안문자 입력항목이 추가되었습니다.</li>
+                                    <li class="square"><em class="em">비밀번호 입력 5회 이상 오류 시 로그인이 제한</em>되며, 비밀번호 재설정을 통해 새로운 비밀번호를 설정하셔야 로그인을 하실 수 있습니다.</li>
+                                    <!-- //180424_수정 [카피] -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tab02" style="display:none;">
+                            <div class="gray_line_box">
+                                <ul class="bull_list min">
+                                    <li class="square">SK브로드밴드 회원가입은 SK브로드밴드 서비스 가입 고객에 한하여 가능합니다.</li>
+                                    <li class="square">회원 가입을 하시려면 SK브로드밴드 웹 사이트 상단 ‘회원가입‘ 버튼을 누르세요.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tab03" style="display:none;">
+                            <div class="gray_line_box">
+                                <ul class="bull_list min">
+                                    <li class="square">SK브로드밴드 가입 고객께서는 아이디/비밀번호 찾기에서 본인확인 절차를 통해 아이디 확인이 가능합니다.</li>
+                                    <li class="square">비밀번호를 잃어버린 경우, SK브로드밴드 웹 사이트 상단 ‘아이디 및 비밀번호 찾기‘ 버튼을 통해 직접 확인하실 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pos_btn">
+                        <a href="https://www.skbroadband.com/common/Iframe_View.do?retUrl=https%3A//ucyber.skbroadband.com:8443/normal.do%3FserviceId%3DS_DUMY0001%26viewId%3DV_COMM8001%26menuType%3DP" class="btn white_btn h34"><span class="arr_ico">고객센터 자주 찾는 질문 바로가기</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //containers -->
+    <footer class="footer">
+        <p class="copy">COPYRIGHT 2018 BY SK broadband CO.LTD. ALL RIGHTS RESERVED.</p><!-- 180424_수정 [카피] -->
+    </footer>
+</div>
+<!-- footer script -->
+<!--#include virtual="/3rd/common/20180410/footer_script.html" -->
+<!-- // footer script -->
+<script type="text/javascript" src="https://logon.skbroadband.com:7443/3rd/common/20180410/libs/jquery.min.js"></script>
+<script type="text/javascript" src="https://logon.skbroadband.com:7443/3rd/common/20180410/vcui.js"></script>
+<script type="text/javascript" src="https://logon.skbroadband.com:7443/3rd/common/20180410/vcui.common-ui.js"></script>
+<script type="text/javascript" src="https://logon.skbroadband.com:7443/3rd/common/20180410/skb.site.js"></script>
+</body>
+
+<!-- Mirrored from logon.skbroadband.com:7443/3rd/signup.jsp?NONCE=mb44dkHcFTtjuXoQAOnAdFuRqx5Tf2CkO27OcxpeesaiWrZ91jqgf1TFdN58wH1EeEm1zuFI1qCm+ZA8lUIA6w%3D%3D&UURL=https%3A%2F%2Flogon.skbroadband.com%3A7443%2Fnls%2Ffcs by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jun 2020 10:05:37 GMT -->
+</html>
